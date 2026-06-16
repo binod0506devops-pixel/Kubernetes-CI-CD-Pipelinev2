@@ -36,7 +36,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONARQUBETOKENV1}}  # Ensure this secret is set in GitHub
         run: |
           mvn sonar:sonar \
-          -Dsonar.projectKey=myapp \
+          -Dsonar.projectKey=binod0506devops-pixel_Kubernetes-CI-CD-Pipelinev2 \
           -Dsonar.organization=binod0506devops-pixel \
           -Dsonar.host.url=https://sonarcloud.io \
           -Dsonar.login=${SONAR_TOKEN}
