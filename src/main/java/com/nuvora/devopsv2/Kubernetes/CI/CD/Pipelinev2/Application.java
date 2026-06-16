@@ -6,9 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication(
 		scanBasePackages = {
 				"com.nuvora.devopsv2.Kubernetes.CI.CD.Pipelinev2",
-				"controller",
-				"repository",
-				"entity"
+				"com/nuvora/devopsv2/Kubernetes/CI/CD/Pipelinev2/controller",
+				"com/nuvora/devopsv2/Kubernetes/CI/CD/Pipelinev2/repository",
+				"com/nuvora/devopsv2/Kubernetes/CI/CD/Pipelinev2/entity"
 		}
 )
 public class Application {

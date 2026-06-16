@@ -1,4 +1,4 @@
-package entity;
+package com.nuvora.devopsv2.Kubernetes.CI.CD.Pipelinev2.entity;
 
 import jakarta.persistence.*;
 

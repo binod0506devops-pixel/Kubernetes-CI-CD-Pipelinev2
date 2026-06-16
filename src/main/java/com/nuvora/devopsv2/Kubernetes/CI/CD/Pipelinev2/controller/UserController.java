@@ -1,7 +1,8 @@
-package controller;
-import org.apache.catalina.User;
+package com.nuvora.devopsv2.Kubernetes.CI.CD.Pipelinev2.controller;
+
+import com.nuvora.devopsv2.Kubernetes.CI.CD.Pipelinev2.entity.User;
 import org.springframework.web.bind.annotation.*;
-import repository.UserRepository;
+import com.nuvora.devopsv2.Kubernetes.CI.CD.Pipelinev2.repository.UserRepository;
 
 import java.util.List;
 
