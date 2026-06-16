@@ -33,7 +33,7 @@ jobs:
       # Step 4: SonarQube (or SonarCloud) code quality analysis
       - name: SonarQube Analysis
         env:
-          SONAR_TOKEN: ${{ secrets.sonarQubeToken }}  # Ensure this secret is set in GitHub
+          SONAR_TOKEN: ${{ secrets.sonarQubeTokenv1 }}  # Ensure this secret is set in GitHub
         run: |
           mvn sonar:sonar \
           -Dsonar.projectKey=myapp \
