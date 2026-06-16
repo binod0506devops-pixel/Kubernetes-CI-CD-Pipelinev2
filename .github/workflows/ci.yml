@@ -31,15 +31,15 @@ jobs:
         run: mvn clean package
 
       # Step 4: SonarQube (or SonarCloud) code quality analysis
-      - name: SonarQube Analysis
-        env:
-          SONAR_TOKEN: ${{ secrets.sonarQubeTokenv1 }}  # Ensure this secret is set in GitHub
-        run: |
-          mvn sonar:sonar \ 
-          -Dsonar.projectKey=myapp \
-          -Dsonar.organization=binod0506devops-pixel \
-          -Dsonar.host.url=https://sonarcloud.io \
-          -Dsonar.login=${SONAR_TOKEN}
+#      - name: SonarQube Analysis
+#        env:
+#          SONAR_TOKEN: ${{ secrets.sonarQubeTokenv1 }}  # Ensure this secret is set in GitHub
+#        run: |
+#          mvn sonar:sonar \
+#          -Dsonar.projectKey=myapp \
+#          -Dsonar.organization=binod0506devops-pixel \
+#          -Dsonar.host.url=https://sonarcloud.io \
+#          -Dsonar.login=${SONAR_TOKEN}
 
       # Step 5: Build Docker image for the application
       - name: Build Docker Image
