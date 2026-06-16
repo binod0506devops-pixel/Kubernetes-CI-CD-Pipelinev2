@@ -38,7 +38,7 @@ jobs:
           -Dsonar.projectKey=myapp \
           -Dsonar.organization=binod0506devops-pixel \
           -Dsonar.host.url=https://sonarcloud.io \
-          -Dsonar.login=$SONAR_TOKEN
+          -Dsonar.login=${SONAR_TOKEN}
 
       # Step 5: Build Docker image for the application
       - name: Build Docker Image
