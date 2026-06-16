@@ -34,7 +34,7 @@ jobs:
       - name: SonarQube Analysis
         env:
           SONAR_TOKEN: ${{ secrets.sonarQubeToken }}  # Make sure to add this token in GitHub Secrets
-        run: mvn sonar:sonar -Dsonar.projectKey=myapp -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
+        run: mvn sonar:sonar -Dsonar.projectKey=myapp -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${SONAR_TOKEN}
 
       # Step 5: Build Docker image for the application
       - name: Build Docker Image
