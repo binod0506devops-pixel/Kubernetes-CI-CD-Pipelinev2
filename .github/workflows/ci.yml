@@ -55,6 +55,6 @@ jobs:
       - name: Push Docker Image
         run: docker push myapp:${{ github.sha }}
 
-      # Step 8: Complete job success
+      # Step 8: Complete job success yuhu
       - name: Complete Job
         run: echo "CI/CD Pipeline completed successfully"
