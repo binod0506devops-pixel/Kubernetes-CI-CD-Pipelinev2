@@ -46,6 +46,15 @@ jobs:
         run: |
           docker build -t binod0506/kubernetes-ci-cd-pipelinev2:${{ github.sha }} .
 
+      # Step 5: Check Secrets
+      - name: Check Secrets
+        run: |
+          echo "Username length: ${#DOCKER_USERNAME}"
+          echo "Token present: $([ -n "$DOCKER_TOKEN" ] && echo YES || echo NO)"
+          env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}   
+
       # Step 6: Log in to Docker Hub (using secrets for credentials)
       - name: Docker Hub Login
         uses: docker/login-action@v3
@@ -58,6 +67,6 @@ jobs:
         run: |
           docker push binod0506/kubernetes-ci-cd-pipelinev2:${{ github.sha }}
 
-      # Step 8: Complete job success
+      # Step 8: Complete job successv3
       - name: Complete Job
         run: echo "CI/CD Pipeline completed successfully"
