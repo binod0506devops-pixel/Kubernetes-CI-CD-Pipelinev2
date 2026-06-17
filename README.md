@@ -1,20 +1,15 @@
-Developer pushes code to GitHub
-↓
-GitHub Actions starts automatically
-↓
-Maven Build
-↓
-Run Unit Tests
-↓
-SonarQube/SonarCloud Analysis
-↓
-Build Docker Image
-↓
-Push Image to Amazon ECR
-↓
-Update Kubernetes Manifests
-↓
-Argo CD deploys changes to Amazon EKS
+
+### CI/CD Pipeline Flow (GitHub Actions → Docker Hub → Argo CD → Amazon EKS)
+
+* ✔ Developer pushes code to GitHub
+* ✔ GitHub Actions pipeline is triggered automatically
+* ✔ Maven project is built
+* ✔ Unit tests are executed
+* ✔ SonarQube quality analysis is performed
+* ✔ Docker image is built
+* ✔ Docker image is pushed to Docker Hub
+* ⏭ Kubernetes manifests are updated with the new image version
+* ⏭ Argo CD detects changes and deploys to Amazon EKS cluster
 
 
 
