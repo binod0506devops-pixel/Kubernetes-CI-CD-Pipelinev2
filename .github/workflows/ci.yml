@@ -67,6 +67,6 @@ jobs:
         run: |
           docker push binod0506/kubernetes-ci-cd-pipelinev2:${{ github.sha }}
 
-      # Step 8: Complete job successv3
+      # Step 8: Complete job 1301
       - name: Complete Job
         run: echo "CI/CD Pipeline completed successfully"
