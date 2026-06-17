@@ -28,3 +28,110 @@
 * Run SonarQube analysis during the CI process to ensure code quality checks.
 
 
+### Write Kubernetes manifests (Deployment, Service, Ingress or LoadBalancer) and deploy the app so it is accessible via a public URL or NodePort
+
+
+
+### Minikube
+# Check Minikube status: minikube status
+# Start Minikube cluster: minikube start
+# Stop Minikube cluster: minikube stop
+
+### Deployment
+# Create or update deployment
+kubectl apply -f deployment.yaml
+
+# List deployments
+kubectl get deployment
+
+# View deployment details
+kubectl describe deployment user-app-deployment
+
+# Check rollout status
+kubectl rollout status deployment/user-app-deployment
+
+# Restart deployment
+kubectl rollout restart deployment/user-app-deployment
+
+# Verify deployed image
+kubectl get deployment user-app-deployment -o=jsonpath="{.spec.template.spec.containers[0].image}"
+
+### Pods
+# List pods
+kubectl get pods
+
+# Watch pods in real time
+kubectl get pods -w
+
+# View pod details
+kubectl describe pod <pod-name>
+
+# View pod logs
+kubectl logs <pod-name>
+
+# Stream pod logs
+kubectl logs -f <pod-name>
+
+### Services
+# List services
+kubectl get svc
+
+# View service details
+kubectl describe svc user-app-service
+
+### Endpoints
+# List service endpoints
+kubectl get endpoints
+
+### Cluster Verification
+# View all cluster resources
+kubectl get all
+
+# Display cluster information
+kubectl cluster-info
+
+# List cluster nodes
+kubectl get nodes
+
+### Port Forwarding
+# Forward service port to local machine
+kubectl port-forward svc/user-app-service 8081:8081
+
+### Execute Inside Pod
+# Open shell inside pod
+kubectl exec -it <pod-name> -- sh
+
+### Image Verification
+# Check deployment configuration
+kubectl describe deployment user-app-deployment
+
+# Verify image currently deployed
+kubectl get deployment user-app-deployment -o=jsonpath="{.spec.template.spec.containers[0].image}"
+
+### Application URLs
+# Start port forwarding before accessing URLs
+kubectl port-forward svc/user-app-service 8081:8081
+
+# Swagger UI  http://localhost:8081/swagger-ui/index.html
+
+
+# OpenAPI Documentation http://localhost:8081/v3/api-docs
+
+# Spring Boot Actuator http://localhost:8081/actuator
+
+# Health Check http://localhost:8081/actuator/health
+
+# Users API http://localhost:8081/api/users
+
+# H2 Database Console http://localhost:8081/h2-console
+
+# Set-Location "D:\CI-CD-Factory\pipeline-v2\Kubernetes CI_CD Pipelinev2\Kubernetes-CI-CD-Pipelinev2" 
+
+
+# Argo cd:credential
+# Username: admin
+# Password:WLBs-jevCNYBFLVu
+
+
+
+
