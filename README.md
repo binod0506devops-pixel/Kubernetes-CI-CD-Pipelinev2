@@ -111,7 +111,10 @@ kubectl get deployment user-app-deployment -o=jsonpath="{.spec.template.spec.con
 ### Application URLs
 # Start port forwarding before accessing URLs
 kubectl port-forward svc/user-app-service 8081:8081
+kubectl port-forward svc/argocd-server -n argocd 8080:443
 
+
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 # Swagger UI  http://localhost:8081/swagger-ui/index.html
 
 
@@ -130,8 +133,6 @@ kubectl port-forward svc/user-app-service 8081:8081
 
 # Argo cd:credential
 # Username: admin
-# Password:WLBs-jevCNYBFLVu
-
-
-
+# Password:WkRRYVlhU1MwVnYxYmswUg==
+Argo cd :https://localhost:8080/applications?proj=&sync=&autoSync=&health=&namespace=&cluster=&labels=&annotations=&operation=
 

@@ -46,6 +46,11 @@ jobs:
         run: |
           docker build -t binod0506/kubernetes-ci-cd-pipelinev2:${{ github.sha }} .
 
+      # Step: Display Image Name
+      - name: Display Image Name
+        run: |
+          echo "Pushing image: binod0506/kubernetes-ci-cd-pipelinev2:${{ github.sha }}"
+
       # Step 5: Check Secrets
       - name: Check Secrets
         env:
@@ -70,3 +75,4 @@ jobs:
       # Step 8: Complete job 1301
       - name: Complete Job
         run: echo "CI/CD Pipeline completed successfully"
+
